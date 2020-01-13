@@ -80,7 +80,6 @@ displayErr() {
 #~*backdoor      1;
 #~*crawler       1;
 #~*bandit        1;
-}
 #' | sudo -E tee /etc/nginx/blockuseragents.rules >/dev/null 2>&1
     
     
