@@ -59,29 +59,29 @@ displayErr() {
     
     
     # Installing Nginx
-    output " "
-    output "Installing Nginx server."
-    output " "
-    sleep 3
+    #output " "
+    #output "Installing Nginx server."
+    #output " "
+    #sleep 3
     
-    sudo aptitude -y install nginx
-    sudo rm /etc/nginx/sites-enabled/default
-    sudo systemctl start nginx.service
-    sudo systemctl enable nginx.service
-    sudo systemctl start cron.service
-    sudo systemctl enable cron.service
+    #sudo aptitude -y install nginx
+    #sudo rm /etc/nginx/sites-enabled/default
+    #sudo systemctl start nginx.service
+    #sudo systemctl enable nginx.service
+    #sudo systemctl start cron.service
+    #sudo systemctl enable cron.service
 	
 
     # Making Nginx a bit hard
-    echo 'map $http_user_agent $blockedagent {
-default         0;
-~*malicious     1;
-~*bot           1;
-~*backdoor      1;
-~*crawler       1;
-~*bandit        1;
+    #echo 'map $http_user_agent $blockedagent {
+#default         0;
+#~*malicious     1;
+#~*bot           1;
+#~*backdoor      1;
+#~*crawler       1;
+#~*bandit        1;
 }
-' | sudo -E tee /etc/nginx/blockuseragents.rules >/dev/null 2>&1
+#' | sudo -E tee /etc/nginx/blockuseragents.rules >/dev/null 2>&1
     
     
     # Installing Mariadb
